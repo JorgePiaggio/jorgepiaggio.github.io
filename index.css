@@ -35,9 +35,10 @@
     --line-height-small: 1.2;
 
     --black: #000;
-    --green: #44cb00a5;
+    --green: #44cb00d4;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
+    --grey: #171717;
 
 
     --container-max-width: 1180px;
@@ -184,7 +185,7 @@ p {
 }
 
 /* --------------------------------------- */
-/* ----- Buttons and Links ----- */
+/* -----          Buttons            ----- */
 /* --------------------------------------- */
 
 a {
@@ -218,7 +219,7 @@ body:not(.user-is-tabbing) a:focus {
     display: inline-block;
     padding: 1rem 4.2rem;
     text-decoration: none;
-    /*color: inherit;*/
+    color: inherit;
     border: 1px solid var(--green);
     font-weight: 400;
 }
@@ -257,8 +258,26 @@ body:not(.user-is-tabbing) a:focus {
 
 .btn--green:hover,
 .btn--green:focus {
-    background: transparent;
+    background: transparent; color: var(--green);
 }
+
+.btn--green2 {
+    background: inherit;
+    transition: all 0.2s;
+}
+
+.btn--green2::after {
+    display: none;
+}
+
+.btn--green2:hover,
+.btn--green2:focus {
+    background: var(--green);
+}
+
+/* --------------------------------------- */
+/* -----            Links            ----- */
+/* --------------------------------------- */
 
 .link__text {
     position: relative;
@@ -515,7 +534,9 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* ----- Studies ----- */
 /* --------------------------------------- */
-
+.education{
+    background-color: var(--grey);
+}
 .study_logos {
     display: flex;
     justify-content: space-between;
@@ -555,7 +576,14 @@ body:not(.user-is-tabbing) a:focus {
         align-items: initial;
     }
 }
-
+.about__photo{
+    margin-top: 30px;
+    border-radius: 5%;
+}
+.about__photo:hover{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
 .about__photo-container {
     margin-bottom: var(--gutter-normal);
 }
@@ -574,7 +602,9 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 /* ----- Contact ----- */
 /* --------------------------------------- */
-
+.contact{
+    background-color: var(--grey);
+}
 .contact__info {
     max-width: var(--container-medium-width);
 }

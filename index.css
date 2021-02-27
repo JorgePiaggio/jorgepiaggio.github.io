@@ -166,7 +166,9 @@ h3 {
     font-size: var(--font-size-medium-1);
     margin-bottom: var(--gutter-small);
 }
-
+h4{
+    color: #35a000d4;
+}
 @media(max-width: 500px) {
     .heading-primary {
         font-size: var(--font-size-large);
@@ -506,7 +508,7 @@ body:not(.user-is-tabbing) a:focus {
 .work__code {
     display: block;
     height: 3rem;
-    margin-left: var(--gutter-normal);
+   /* margin-left: var(--gutter-normal);*/
     transition: all .3s;
 }
 

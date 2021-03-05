@@ -204,6 +204,7 @@
 
     <section class="education" id="education">
       <div class="row">
+
         <h2>Education</h2>
         <div class="study_logos">
           <img src="https://upload.wikimedia.org/wikipedia/commons/6/67/UTN_logo.jpg" class="study_logo" alt="UTN" />
@@ -213,19 +214,22 @@
           <img src="https://www.kurzweilai.net/images/Cambridge-University-logo.png" class="study_logo" alt="University of Cambridge"/>
          <h5> Preliminary English Test (PET) - University of Cambridge - 2000 </h5>
         </div><br><br>
-        <h4>Courses</h4><br>
-        <ul>
-          <li><a href="https://www.freecodecamp.org/certification/chorche/apis-and-microservices">APIs & Microservices - freeCodeCamp.org</a></li>
-          <li><a href="https://www.coursera.org/account/accomplishments/certificate/N2JF4TQUYG3N">Diseñando páginas web con Bootstrap 4</b> - Coursera</a> </li>
-          <li><a href="https://www.coursera.org/account/accomplishments/certificate/U97MVSYKTZZT">Getting started with AWS Machine Learning</b> - Coursera</a> </li>
-          <li><a href="https://www.coursera.org/account/accomplishments/certificate/7B6CADJ9RTBB">Managing Big Data with MySQL - Coursera</a> </li>
-          <li><a href="https://www.freecodecamp.org/certification/chorche/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures - freeCodeCamp.org</a> </li>
-          <li><a href="https://www.freecodecamp.org/certification/chorche/responsive-web-design">Responsive Web Design - freeCodeCamp.org</a> </li>
-          <li><a href="https://www.coursera.org/account/accomplishments/certificate/RAVHQ5V4M5Q4">Desarrollo de Aplicaciones Web: Conceptos Básicos - Coursera</a> </li>
-          <li><a href="https://www.coursera.org/account/accomplishments/certificate/FQCJKFMKWZM9">Fundamentos de Android - Coursera</a> </li>
-          <li><a href="https://www.coursera.org/account/accomplishments/certificate/NFEYFM984Q3P">Programando con Java para Aplicaciones Android - Coursera</a> </li>
 
-        </ul>
+        <button type="button" class="collapsible btn btn--green2"><h4>Courses</h4></button>
+        <div class="content">
+          <ul class="courses">
+            <li><a href="https://www.freecodecamp.org/certification/chorche/apis-and-microservices">APIs & Microservices - freeCodeCamp.org</a></li>
+            <li><a href="https://www.coursera.org/account/accomplishments/certificate/N2JF4TQUYG3N">Diseñando páginas web con Bootstrap 4</b> - Coursera</a> </li>
+            <li><a href="https://www.coursera.org/account/accomplishments/certificate/U97MVSYKTZZT">Getting started with AWS Machine Learning</b> - Coursera</a> </li>
+            <li><a href="https://www.coursera.org/account/accomplishments/certificate/7B6CADJ9RTBB">Managing Big Data with MySQL - Coursera</a> </li>
+            <li><a href="https://www.freecodecamp.org/certification/chorche/javascript-algorithms-and-data-structures">JavaScript Algorithms and Data Structures - freeCodeCamp.org</a> </li>
+            <li><a href="https://www.freecodecamp.org/certification/chorche/responsive-web-design">Responsive Web Design - freeCodeCamp.org</a> </li>
+            <li><a href="https://www.coursera.org/account/accomplishments/certificate/RAVHQ5V4M5Q4">Desarrollo de Aplicaciones Web: Conceptos Básicos - Coursera</a> </li>
+            <li><a href="https://www.coursera.org/account/accomplishments/certificate/FQCJKFMKWZM9">Fundamentos de Android - Coursera</a> </li>
+            <li><a href="https://www.coursera.org/account/accomplishments/certificate/NFEYFM984Q3P">Programando con Java para Aplicaciones Android - Coursera</a> </li>
+          </ul>        
+        </div> 
+
       </div>
     </section>
 
@@ -237,9 +241,8 @@
         <div class="about__content">
           <div class="about__text">
             <p>
-              I'm a Programming Technician from Argentina. I've recentrly finished my IT career at UTN, and I am currently searching for professional experience in this field.
-              <br><br>As a former chess player, I enjoy a lot coding, making games, reading, and anything that challenges my knowledge. 
-              <br><br>In my spare time, I like listening to music, watching cult movies, cycling, and spending time with my family & friends.
+              I'm a Programming Technician from Argentina. I've recently finished my IT career at UTN, and I am currently searching for professional experience in this field.<br><br>
+              I enjoy coding, making games & music, reading, and anything that challenges my knowledge.<br><br> 
             </p>
             <a href="https://drive.google.com/file/d/18H-Q3r0yMErJmVGSqfpWw7xsDyPp-KU-/view?usp=sharing" class="btn btn--green2">My Resume (EN) </a><br><br>
             <a href="https://drive.google.com/file/d/1_8O3ndtm93rm-jtcl4d_u9dw6J5s1UcR/view?usp=sharing" class="btn btn--green2">My Resume (ES) </a>
@@ -296,6 +299,21 @@
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
   </a>
   <script src="./index.js"></script>
+  <script>
+  var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+} </script>
 </body>
 
 </html>

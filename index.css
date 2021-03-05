@@ -83,25 +83,27 @@ body {
     max-width: var(--container-max-width);
     margin: 0 auto;
 }
-/*
-.courses{
-    list-style-type: "→";
-}*/
+
+
+/*lists*/
+
+ul{
+    list-style-type:square;
+}
 
 @counter-style star {
     system: numeric;
     symbols: '⚉' '⚆' '⚇';   /* utf8 code */
     suffix: " ";
 }
-ul{
-    list-style-type:disc;
-}
+
 .courses {
     list-style: star;
     letter-spacing: 3px;
     text-shadow: 1px 1px black;
+    padding-right: 15px;
 }
-
+/**************/
 
 section {
     padding: var(--gutter-huge) 0;
@@ -310,6 +312,30 @@ body:not(.user-is-tabbing) a:focus {
 .btn--green2:focus {
     background: var(--green);
 }
+
+ /* Style the button that is used to open and close the collapsible content */
+ .collapsible {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: 1px solid black;
+    font-size: 15px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+ 
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    margin-left: 40px;
+    display: none;
+    background-color: var(--grey);
+  } 
+
+
 
 /* --------------------------------------- */
 /* -----            Links            ----- */

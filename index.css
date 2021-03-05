@@ -30,7 +30,7 @@
     --font-size-medium-1: 3.6rem;
     --font-size-large: 5.5rem;
     --font-size-huge: 7.5rem;
-    --font-stack: 'Hk Grotesk', sans-serif;
+    --font-stack: 'Ubuntu', sans-serif;
 
     --line-height-normal: 1.7;
     --line-height-small: 1.2;
@@ -76,16 +76,32 @@ body {
     line-height: var(--line-height-normal);
     background: var(--black);
     overflow-x: hidden;
+    text-shadow: 1px 1px black;
 }
 
 .row {
     max-width: var(--container-max-width);
     margin: 0 auto;
 }
+/*
+.courses{
+    list-style-type: "→";
+}*/
 
-ul{
-    list-style: none;
+@counter-style star {
+    system: numeric;
+    symbols: '⚉' '⚆' '⚇';   /* utf8 code */
+    suffix: " ";
 }
+ul{
+    list-style-type:disc;
+}
+.courses {
+    list-style: star;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px black;
+}
+
 
 section {
     padding: var(--gutter-huge) 0;
@@ -145,18 +161,6 @@ h3 {
     color: var(--white);
 }
 
-.heading-primary {
-    line-height: 1;
-    font-size: var(--font-size-huge);
-    font-weight: 400;
-}
-
-@media(max-width: 900px) {
-    .heading-primary {
-        font-size: 6.5rem;
-    }
-}
-
 h2 {
     font-size: var(--font-size-large);
     margin-bottom: var(--gutter-medium);
@@ -176,8 +180,22 @@ h3 {
     margin-bottom: var(--gutter-small);
 }
 h4{
-    color: #35a000d4;
+    text-shadow: 2px 2px #616161d4;
+    font-size: var(--font-size-medium);
 }
+
+.heading-primary {
+    line-height: 1;
+    font-size: var(--font-size-huge);
+    font-weight: 400;
+}
+
+@media(max-width: 900px) {
+    .heading-primary {
+        font-size: 6.5rem;
+    }
+}
+
 @media(max-width: 500px) {
     .heading-primary {
         font-size: var(--font-size-large);
